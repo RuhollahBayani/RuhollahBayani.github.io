@@ -199,6 +199,17 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 20px; letter-spac
 .facts dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
 .facts dd { margin: 0; font-weight: 500; }
 
+.certs { margin-top: 40px; display: grid; gap: 14px; }
+.certs h3 { font-size: 18px; }
+.certs ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.certs a {
+  display: grid; gap: 6px; height: 100%; padding: 16px; text-decoration: none;
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+}
+.certs a:hover { border-color: var(--ink); }
+.cert-name { font-family: var(--display); font-weight: 700; font-size: 17px; line-height: 1.25; }
+.cert-view { font-size: 14px; font-weight: 600; color: var(--ai); margin-top: 4px; }
+
 /* Skills + contact */
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; border-top: 1px solid var(--line); padding-top: 24px; }
 .skills h3 { font-size: 16px; display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
@@ -221,6 +232,6 @@ footer { padding-block: 40px 32px; color: var(--muted); font-size: 13px; font-fa
 @media (max-width: 560px) {
   body { padding-inline: 16px; }
   .top { margin-inline: -16px; padding-inline: 16px; }
-  .grid, .grid.two, .grid.gallery, .grid.gallery-row, .ai-grid, .skills { grid-template-columns: 1fr; }
+  .grid, .grid.two, .grid.gallery, .grid.gallery-row, .ai-grid, .skills, .certs ul { grid-template-columns: 1fr; }
   .nav { gap: 12px; }
 }
