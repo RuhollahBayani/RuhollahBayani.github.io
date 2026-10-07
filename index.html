@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ruhollah Bayani · Portfolio</title>
+<meta name="description" content="Photo editing, coding and AI work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Ruhollah Bayani</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#photo"><span class="dot" style="background:var(--photo)"></span>Photo</a>
+      <a href="#code"><span class="dot" style="background:var(--code)"></span>Code</a>
+      <a href="#ai"><span class="dot" style="background:var(--ai)"></span>AI</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <span class="eyebrow">Portfolio · 2026</span>
+    <h1>Ruhollah Bayani
+      <span class="role"><b>Photo editor</b> &amp; coder who builds with AI.</span>
+    </h1>
+    <p class="lede">I retouch, grade and composite photos, and build small web tools that make creative work faster. Lately I build a lot of that with Claude.</p>
+
+    <div class="timeline-scroll" role="region" aria-label="Project timeline" tabindex="0">
+      <div class="timeline">
+        <div class="ruler">
+          <div class="corner">TRACK</div>
+          <div class="ticks"><span>00:00:00:00</span><span>00:00:10:00</span><span>00:00:20:00</span><span>00:00:30:00</span><span>00:00:40:00</span></div>
+        </div>
+        <div class="track">
+          <div class="label"><strong>P1</strong> Photo</div>
+          <div class="lane">
+            <a class="clip" href="#photo" style="--c:var(--photo);left:2%;width:26%">Sultan Dune</a>
+            <a class="clip" href="#photo" style="--c:var(--photo);left:31%;width:24%">Mon Etoile Nº3</a>
+            <a class="clip" href="#photo" style="--c:var(--photo);left:58%;width:28%">Low-key portrait</a>
+          </div>
+        </div>
+        <div class="track">
+          <div class="label"><strong>C1</strong> Code</div>
+          <div class="lane">
+            <a class="clip" href="#code" style="--c:var(--code);left:4%;width:22%">This site</a>
+            <a class="clip" href="#code" style="--c:var(--code);left:29%;width:30%">Photo filter lab</a>
+            <a class="clip" href="#code" style="--c:var(--code);left:62%;width:28%">Batch watermarker</a>
+          </div>
+        </div>
+        <div class="track">
+          <div class="label"><strong>X1</strong> AI</div>
+          <div class="lane">
+            <a class="clip" href="#ai" style="--c:var(--ai);left:14%;width:30%">Caption writer</a>
+            <a class="clip" href="#ai" style="--c:var(--ai);left:48%;width:36%">Shot-list skill</a>
+          </div>
+        </div>
+        <div class="playhead" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO -->
+  <section class="block" id="photo" style="--c:var(--photo)">
+    <div class="block-head">
+      <span class="tag"><span class="dot" style="background:var(--photo)"></span>Track P1 · Photo editing</span>
+      <h2>Colour, light and clean retouching.</h2>
+      <p>Lightroom for the grade, Photoshop for the detail work. Drag the slider to compare the raw file with the finished edit.</p>
+    </div>
+
+    <div class="ba-row">
+      <div class="ba" id="ba" style="--split:50%">
+        <img src="Image/after-web.jpg" alt="Finished composite: the subject walking across desert dunes with a huge ship hovering behind">
+        <div class="before"><img src="Image/before.jpg" alt="The original studio shot against a plain grey backdrop, unedited RAW"></div>
+        <span class="lbl l">BEFORE</span><span class="lbl r">AFTER</span>
+        <div class="divider"></div>
+        <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Compare before and after">
+      </div>
+      <div class="copy">
+        <span class="meta">Composite · Studio portrait → desert scene</span>
+        <h3>Sultan Dune</h3>
+        <p>A studio portrait shot on a plain grey backdrop, cut out and composited into a desert scene with a ship overhead. Drag the slider to see the original.</p>
+        <ul class="chips"><li>Photoshop</li><li>Compositing</li><li>Masking</li></ul>
+      </div>
+    </div>
+
+    <div class="grid gallery">
+      <article class="work">
+        <div class="thumb photo landscape">
+          <img src="Image/gallery-1.jpg" alt="Mon Etoile No 3 perfume bottle on rippling water: plain blue backdrop on the left, deep starry sky on the right" loading="lazy">
+          <span class="lbl l">BEFORE</span><span class="lbl r">AFTER</span>
+        </div>
+        <span class="meta">Product</span>
+        <h3>Mon Etoile Nº3</h3>
+        <p>Perfume product shot. Deepened the backdrop into a night sky, added stars and sparkles, and cleaned up the bottle and its reflection.</p>
+        <ul class="chips"><li>Photoshop</li><li>Product</li><li>Compositing</li></ul>
+      </article>
+      <article class="work">
+        <div class="thumb photo portrait"><img src="Image/gallery-2.jpg" alt="Low-key studio portrait in a black suit, looking up and away from the camera" loading="lazy"></div>
+        <span class="meta">Portrait</span>
+        <h3>Low-key portrait</h3>
+        <p>One light on a black backdrop. Retouched skin with the texture kept.</p>
+        <ul class="chips"><li>Photoshop</li><li>Retouching</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- CODE -->
+  <section class="block" id="code" style="--c:var(--code)">
+    <div class="block-head">
+      <span class="tag"><span class="dot" style="background:var(--code)"></span>Track C1 · Coding</span>
+      <h2>Small tools for creative work.</h2>
+      <p>I'm learning to code by building things I actually use in my editing work.</p>
+    </div>
+    <div class="grid">
+      <article class="repo">
+        <div class="bar"><span>~/portfolio</span><span class="status">● live</span></div>
+        <div class="body">
+          <h3>This portfolio</h3>
+          <p>Hand-built with HTML, CSS and JavaScript. Responsive, dark mode, and a working before/after slider.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <div class="links"><a href="#">Code</a><a href="#">Live site</a></div>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="bar"><span>~/photo-filter-lab</span><span class="status">● live</span></div>
+        <div class="body">
+          <h3>Photo filter lab</h3>
+          <p>Upload a photo and adjust brightness, contrast and saturation in the browser, pixel by pixel on a canvas.</p>
+          <ul class="chips"><li>JavaScript</li><li>Canvas API</li></ul>
+          <div class="links"><a href="projects/photo-filter-lab/script.js">Code</a><a href="projects/photo-filter-lab/index.html">Try it</a></div>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="bar"><span>~/batch-watermark</span><span class="status">● v1.0</span></div>
+        <div class="body">
+          <h3>Batch watermarker</h3>
+          <p>A Python script that resizes a folder of photos for Instagram and stamps my logo in the corner, plus a browser version you can try.</p>
+          <ul class="chips"><li>Python</li><li>Pillow</li><li>CLI</li><li>JavaScript</li></ul>
+          <div class="links"><a href="projects/batch-watermark/watermark.py">Code</a><a href="projects/batch-watermark/index.html">Try it</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section class="block" id="ai" style="--c:var(--ai)">
+    <div class="block-head">
+      <span class="tag"><span class="dot" style="background:var(--ai)"></span>Track X1 · AI</span>
+      <h2>Building with Claude.</h2>
+      <p>I use Claude to plan edits, write and debug code, and automate the boring parts of a creative workflow.</p>
+    </div>
+    <div class="ai-grid">
+      <article class="work">
+        <h3>AI caption &amp; alt-text writer</h3>
+        <p>A Python tool that sends my photos to the Claude API and gets back an Instagram caption, hashtags and accessible alt text, in the tone I ask for.</p>
+        <div class="prompt"><span class="who">$</span> python3 caption.py sofia.jpg --tone "calm, no emojis"</div>
+        <ul class="chips"><li>Claude API</li><li>Vision</li><li>Python</li></ul>
+        <div class="links"><a href="projects/caption-writer/caption.py">Code</a><a href="projects/caption-writer/README.md">How to use</a></div>
+      </article>
+      <article class="work">
+        <h3>Shot-list skill for Claude</h3>
+        <p>A custom Claude Skill that turns a client brief into a full shoot plan: shot list, lighting setups, schedule, retouch plan and gear checklist.</p>
+        <div class="prompt"><span class="who">you ›</span> Perfume shoot, bottle on water, night-sky mood. 2 hours, 6 finals for Instagram.
+<span class="who">claude ›</span> #1 · Hero bottle on water · low angle, 100mm macro · Setup A · Must</div>
+        <ul class="chips"><li>Claude Skills</li><li>Prompt design</li></ul>
+        <div class="links"><a href="projects/shot-list-skill/shot-list/SKILL.md">Skill file</a><a href="projects/shot-list-skill/example.md">Example plan</a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="block" id="skills">
+    <div class="block-head">
+      <h2>Toolkit</h2>
+    </div>
+    <div class="skills">
+      <div><h3><span class="dot" style="background:var(--photo)"></span>Photo</h3><ul><li>Lightroom Classic</li><li>Photoshop</li><li>Retouching</li><li>Colour grading</li></ul></div>
+      <div><h3><span class="dot" style="background:var(--code)"></span>Code</h3><ul><li>HTML &amp; CSS</li><li>JavaScript</li><li>Python</li><li>Git &amp; GitHub</li></ul></div>
+      <div><h3><span class="dot" style="background:var(--ai)"></span>AI</h3><ul><li>Claude &amp; Claude Code</li><li>Claude API</li><li>Prompt writing</li><li>Workflow automation</li></ul></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block" id="contact">
+    <div class="contact">
+      <div>
+        <span class="eyebrow">Available for freelance</span>
+        <h2 style="margin-block:8px 16px">Have a project? Let's talk.</h2>
+        <div class="email-row">
+          <span class="email" id="email">bayanir94@gmail.com</span>
+          <button class="copy" id="copy" type="button">Copy email</button>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/rbayani/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://github.com/RuhollahBayani" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year">2026</span> Ruhollah Bayani · Built by hand, with help from Claude.</footer>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Filter Lab · Ruhollah Bayani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="back" href="../../index.html#code">← Back to portfolio</a>
+  <span class="meta">~/photo-filter-lab</span>
+</header>
+
+<main>
+  <div class="intro">
+    <h1>Photo Filter Lab</h1>
+    <p>Upload a photo and adjust it. Every slider runs my own code over each pixel of the image. No built-in filters.</p>
+  </div>
+
+  <div class="lab">
+    <!-- The photo is drawn onto this canvas. JavaScript reads and rewrites its pixels. -->
+    <div class="stage" id="stage">
+      <canvas id="canvas" aria-label="Edited photo"></canvas>
+      <span class="badge" id="badge" hidden>BEFORE</span>
+      <p class="drop-hint">Drop a photo here</p>
+    </div>
+
+    <aside class="panel">
+      <label class="upload">
+        <input type="file" id="file" accept="image/*">
+        <span>Upload a photo</span>
+      </label>
+
+      <div class="control">
+        <div class="row"><label for="brightness">Brightness</label><output id="brightness-val">0</output></div>
+        <input type="range" id="brightness" min="-100" max="100" value="0">
+      </div>
+      <div class="control">
+        <div class="row"><label for="contrast">Contrast</label><output id="contrast-val">0</output></div>
+        <input type="range" id="contrast" min="-100" max="100" value="0">
+      </div>
+      <div class="control">
+        <div class="row"><label for="saturation">Saturation</label><output id="saturation-val">0</output></div>
+        <input type="range" id="saturation" min="-100" max="100" value="0">
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="compare">Hold to see before</button>
+        <button type="button" id="reset">Reset</button>
+        <button type="button" id="download" class="primary">Download</button>
+      </div>
+
+      <p class="meta" id="info">Loading sample photo…</p>
+    </aside>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

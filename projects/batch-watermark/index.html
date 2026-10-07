@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batch Watermarker · Ruhollah Bayani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<!-- Shares the Filter Lab's look, plus a few styles of its own -->
+<link rel="stylesheet" href="../photo-filter-lab/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="back" href="../../index.html#code">← Back to portfolio</a>
+  <span class="meta">~/batch-watermark</span>
+</header>
+
+<main>
+  <div class="intro">
+    <h1>Batch Watermarker</h1>
+    <p>Drop in a set of photos. Each one is resized to Instagram width (1080px) and stamped with a logo. This page is a browser version of my Python script, which does the same to a whole folder at once.</p>
+  </div>
+
+  <div class="lab">
+    <div class="stage results" id="stage">
+      <div class="grid" id="grid"></div>
+      <p class="drop-hint">Drop photos here</p>
+    </div>
+
+    <aside class="panel">
+      <label class="upload">
+        <input type="file" id="photos" accept="image/*" multiple>
+        <span>Upload photos</span>
+      </label>
+      <label class="upload small">
+        <input type="file" id="logo-file" accept="image/png,image/webp,image/svg+xml,image/*">
+        <span>Use your own logo (PNG)</span>
+      </label>
+
+      <div class="control">
+        <label for="position">Position</label>
+        <select id="position">
+          <option value="bottom-right">Bottom right</option>
+          <option value="bottom-left">Bottom left</option>
+          <option value="top-right">Top right</option>
+          <option value="top-left">Top left</option>
+        </select>
+      </div>
+      <div class="control">
+        <div class="row"><label for="logo-size">Logo size</label><output id="logo-size-val">15%</output></div>
+        <input type="range" id="logo-size" min="5" max="40" value="15">
+      </div>
+      <div class="control">
+        <div class="row"><label for="opacity">Opacity</label><output id="opacity-val">80%</output></div>
+        <input type="range" id="opacity" min="10" max="100" value="80">
+      </div>
+
+      <button type="button" id="download-all" class="primary">Download all</button>
+      <p class="meta" id="info">Loading sample…</p>
+    </aside>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

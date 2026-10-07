@@ -1,0 +1,107 @@
+/* Same colours and fonts as the main portfolio */
+:root {
+  --bg: #EDEFF2;
+  --surface: #F8F9FB;
+  --surface-2: #E3E6EB;
+  --ink: #15171C;
+  --muted: #5A606B;
+  --line: #D3D7DE;
+  --accent: #13805F;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #0F1115;
+    --surface: #171A20;
+    --surface-2: #1F232B;
+    --ink: #E8EAEE;
+    --muted: #979EAA;
+    --line: #2B303A;
+    --accent: #3DC39A;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-inline: 20px;
+}
+main { max-width: 1120px; margin-inline: auto; padding-block: 32px 64px; }
+button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.top {
+  max-width: 1120px; margin-inline: auto; padding-block: 16px;
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+}
+.back { color: var(--ink); font-weight: 600; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.meta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin: 0; }
+
+.intro { display: grid; gap: 8px; margin-bottom: 28px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 6vw, 60px); line-height: 1; letter-spacing: -0.03em; margin: 0; }
+.intro p { margin: 0; color: var(--muted); max-width: 60ch; }
+
+/* Layout: photo on the left, controls on the right */
+.lab { display: grid; grid-template-columns: 1fr 300px; gap: 28px; align-items: start; }
+
+.stage {
+  position: relative; display: grid; place-items: center;
+  min-height: 320px; padding: 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.stage.dragging { border: 2px dashed var(--accent); }
+canvas { display: block; max-width: 100%; max-height: 75vh; height: auto; border-radius: 3px; }
+.badge {
+  position: absolute; top: 20px; left: 20px;
+  font-family: var(--mono); font-size: 11px; color: #fff;
+  background: rgba(0,0,0,0.55); padding: 3px 8px; border-radius: 3px;
+}
+.drop-hint {
+  position: absolute; inset: 0; margin: 0; display: none; place-items: center;
+  font-family: var(--mono); color: var(--accent); background: color-mix(in srgb, var(--surface) 85%, transparent);
+}
+.stage.dragging .drop-hint { display: grid; }
+
+.panel {
+  display: grid; gap: 20px; padding: 20px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.upload input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.upload span {
+  display: block; text-align: center; cursor: pointer; font-weight: 600;
+  padding: 12px; border: 1px dashed var(--line); border-radius: var(--radius);
+}
+.upload span:hover, .upload input:focus-visible + span { border-color: var(--accent); color: var(--accent); }
+
+.control { display: grid; gap: 6px; }
+.row { display: flex; justify-content: space-between; font-weight: 500; }
+output { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+
+.buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.buttons #compare { grid-column: 1 / -1; }
+button {
+  font: 600 14px var(--body); padding: 10px 12px; cursor: pointer;
+  border-radius: var(--radius); border: 1px solid var(--line);
+  background: var(--surface-2); color: var(--ink);
+}
+button:hover { border-color: var(--ink); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+button:disabled:hover { border-color: var(--line); }
+button.primary:disabled:hover { border-color: var(--accent); }
+
+@media (max-width: 760px) {
+  body { padding-inline: 16px; }
+  .lab { grid-template-columns: 1fr; }
+}

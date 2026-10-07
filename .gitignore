@@ -1,0 +1,17 @@
+# Mac system files
+.DS_Store
+
+# Claude app settings for this folder
+.claude/
+
+# Old preview copy of the page (not part of the site)
+portfolio.html
+
+# Python cache
+__pycache__/
+
+# Captions saved by caption.py --save
+*-caption.txt
+
+# Never upload secrets
+.env
