@@ -169,6 +169,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 20px; letter-spac
 .grid.gallery { grid-template-columns: 2fr 1fr; }
 .thumb.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .thumb.landscape { aspect-ratio: 3 / 2; }
+.grid.gallery-row { margin-top: 32px; }
 .thumb.portrait { aspect-ratio: 3 / 4; }
 .thumb .lbl { position: absolute; top: 10px; font-family: var(--mono); font-size: 11px; color: #fff; background: rgba(0,0,0,0.45); padding: 3px 8px; border-radius: 3px; }
 .thumb .lbl.l { left: 10px; } .thumb .lbl.r { left: calc(50% + 10px); }
@@ -188,6 +189,16 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 20px; letter-spac
 .prompt { font-family: var(--mono); font-size: 13px; background: var(--surface-2); border-radius: var(--radius); padding: 12px 14px; color: var(--ink); white-space: pre-wrap; overflow-x: auto; line-height: 1.55; }
 .prompt .who { color: var(--ai); }
 
+/* About */
+.about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+.about-text { display: grid; gap: 14px; }
+.about-text h2 { margin-bottom: 4px; }
+.about-text p { margin: 0; color: var(--muted); max-width: 60ch; font-size: 17px; }
+.facts { margin: 0; display: grid; border-top: 1px solid var(--line); }
+.facts div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.facts dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.facts dd { margin: 0; font-weight: 500; }
+
 /* Skills + contact */
 .skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; border-top: 1px solid var(--line); padding-top: 24px; }
 .skills h3 { font-size: 16px; display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
@@ -203,12 +214,13 @@ footer { padding-block: 40px 32px; color: var(--muted); font-size: 13px; font-fa
 @media (max-width: 860px) {
   .grid, .grid.two, .ai-grid { grid-template-columns: 1fr 1fr; }
   .grid.gallery { grid-template-columns: 2fr 1fr; }
-  .ba-row, .contact { grid-template-columns: 1fr; }
+  .grid.gallery-row { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .ba-row, .contact, .about { grid-template-columns: 1fr; }
   .socials { justify-content: flex-start; }
 }
 @media (max-width: 560px) {
   body { padding-inline: 16px; }
   .top { margin-inline: -16px; padding-inline: 16px; }
-  .grid, .grid.two, .grid.gallery, .ai-grid, .skills { grid-template-columns: 1fr; }
+  .grid, .grid.two, .grid.gallery, .grid.gallery-row, .ai-grid, .skills { grid-template-columns: 1fr; }
   .nav { gap: 12px; }
 }
